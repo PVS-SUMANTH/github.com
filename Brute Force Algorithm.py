@@ -1,3 +1,4 @@
+import time 
 import networkx as nx
 from itertools import permutations
 
@@ -11,7 +12,7 @@ def all_permutations(g):
 
       # length of the tour 
       for i in range(len(tour)) :
-      	if not g.has_edge(touAr[i], tour[i-1]) :
+      	if not g.has_edge(tour[i], tour[i-1]) :
       		valid = False
       		break
       	else :
@@ -22,3 +23,5 @@ def all_permutations(g):
         shortest_tour = tour_len
 
     return shortest_tour
+
+
